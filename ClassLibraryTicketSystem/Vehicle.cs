@@ -6,34 +6,38 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryTicketSystem
 {
-    class Vehicle
+    public abstract class Vehicle
     {
-        private string _licensePlate;
-        private DateTime _date;
-
-        public Vehicle()
-        {}
-
-        public Vehicle(string licensePlate, DateTime date)
+        private string licenseplate;
+        public string Licenseplate
         {
-
-            _date = date;
-            if (licensePlate.Length > 7)
-            
-                throw new ArgumentOutOfRangeException("License is over 7 characters");
-         
-            else 
-                
-                _licensePlate = licensePlate;
+            get { return licenseplate; }
+            set
+            {
+                if (value.Length <= 7)
+                {
+                    licenseplate = value;
+                }
+                else
+                {
+                    throw new ArgumentOutOfRangeException("Lisense Plate it too long");
+                }
+            }
         }
 
-        public string LicensePlate { get => _licensePlate; set => _licensePlate = value; }
-        public DateTime Date { get => _date; set => _date = value; }
+        public bool Brobizz { get; set; }
+        public DateTime Date { get; set; }
+        public abstract double Price();
+        public abstract string VehichleType();
+        }
 
+       
+
+       
         
        
 	
 
 	}
     
-}
+

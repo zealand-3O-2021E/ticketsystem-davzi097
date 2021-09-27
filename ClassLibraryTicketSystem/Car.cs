@@ -6,22 +6,30 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryTicketSystem
 {
-    class Car : Vehicle
+    public class Car : Vehicle
     {
-
         public Car()
         {
-            
-        }
 
-        public double Price()
+        }
+        public override double Price()
         {
-            return 240;
+            if (Brobizz)
+            {
+                return 240 - (240 * 5 / 100);
+            }
+            else
+            {
+                return 240;
+            }
         }
 
-        public string VehicleType()
+        public override string VehichleType()
         {
             return "Car";
         }
+
+        
+
     }
 }

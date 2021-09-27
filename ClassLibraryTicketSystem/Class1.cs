@@ -8,21 +8,6 @@ namespace ClassLibraryTicketSystem
 {
     public class Class1
     {
-        public static void Main()
-        {
-
-            Car C1 = new Car();
-            MC MC1 = new MC();
-            List<Vehicle> vehicles = new List<Vehicle>();
-            vehicles.Add(C1);
-            vehicles.Add(MC1);
-            
-            
-
-
-
-
-
-        }
+        
     }
 }

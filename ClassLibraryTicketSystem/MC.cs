@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryTicketSystem
 {
-    class MC : Vehicle
+    public class MC : Vehicle
     {
 
         public MC()
@@ -14,12 +14,19 @@ namespace ClassLibraryTicketSystem
 
         }
 
-        public double Price()
+        public override double Price()
         {
-            return 125;
+            if (Brobizz)
+            {
+                return 125 - (125 * 5 / 100);
+            }
+            else
+            {
+                return 125;
+            }
         }
 
-        public string VehicleType()
+        public override string VehichleType()
         {
             return "MC";
         }
