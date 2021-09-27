@@ -6,19 +6,13 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryTicketSystem
 {
-    class MC
+    class MC : Vehicle
     {
-        private string _licensePlate;
-        private DateTime _date;
 
-        public MC(string licensePlate, DateTime date)
+        public MC()
         {
-            _licensePlate = licensePlate;
-            _date = date;
-        }
 
-        public string LicensePlate { get => _licensePlate; set => _licensePlate = value; }
-        public DateTime Date { get => _date; set => _date = value; }
+        }
 
         public double Price()
         {
