@@ -11,26 +11,33 @@ namespace ClassLibraryTicketSystem.Tests
     [TestClass()]
     public class MCTests
     {
+        //test license lenght is 7
         [TestMethod()]
-        public void MCTest()
+        public void LicenseLength7Test()
         {
             Vehicle mc1 = new MC();
             mc1.Licenseplate = "1234567";
+            int explength = 7;
+            Assert.AreEqual(mc1.Licenseplate.Length, explength);
+
         }
 
+        //test license lenght is 8 (over 7)
+        [TestMethod()]
+        public void LicenseLength8Test()
+        {
+            Vehicle mc1 = new MC();
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => mc1.Licenseplate = "12345678");
+
+        }
+
+        //test price of the car
         [TestMethod()]
         public void PriceTest()
         {
-            MC c1 = new MC();
-            c1.Brobizz = true;
-            Console.WriteLine(c1.Price());
-        }
-
-        [TestMethod()]
-        public void VehichleTypeTest()
-        {
-            Vehicle C1 = new Car();
-            Console.WriteLine(C1.VehichleType());
+            MC mc1 = new MC();
+            var expprice = 125;
+            Assert.AreEqual(mc1.Price(), expprice);
         }
     }
 }

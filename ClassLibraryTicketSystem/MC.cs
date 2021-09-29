@@ -18,7 +18,7 @@ namespace ClassLibraryTicketSystem
         {
             if (Brobizz)
             {
-                return 125 - (125 * 5 / 100);
+                return 125 * 0.95;
             }
             else
             {
