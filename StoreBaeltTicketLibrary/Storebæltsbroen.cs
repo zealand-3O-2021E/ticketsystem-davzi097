@@ -6,7 +6,7 @@ namespace StoreBaeltTicketLibrary
     public class Storebæltsbroen
     {
         
-        public static double WeekendDiscount( Car C1)
+        public static double WeekendDiscount(Car C1)
         {
             
             DateTime date = C1.Date;
