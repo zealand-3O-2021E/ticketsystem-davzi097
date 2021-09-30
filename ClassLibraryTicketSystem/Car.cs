@@ -6,17 +6,27 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryTicketSystem
 {
+    /// <summary>
+    /// comment
+    /// </summary>
     public class Car : Vehicle
     {
+        /// <summary>
+        /// comment
+        /// </summary>
         public Car()
         {
 
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public override double Price()
         {
             if (Brobizz)
             {
-                return 240 * 0.95;
+                return 240 * 0.95; 
             }
             else
             {
